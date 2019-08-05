@@ -87,6 +87,10 @@ init(ctx: ref Draw->Context, argv: list of string) {
 	if(nsf != nil && genns)
 		usage();
 
+	# Can't generate if we don't have someone to generate
+	if(genns && archf == nil && protof == nil)
+		usage();
+
 	### Load all required data
 
 	# Parse cfg, or expect argument for cmd -- argument takes precedence
@@ -303,4 +307,3 @@ contains(s₀, s₁: string ): int {
 
 	return 0;
 }
-

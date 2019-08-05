@@ -1,6 +1,6 @@
 </mkconfig
 
-DISBIN = $home/dis
+DISBIN = /dis
 
 TARG=\
 	ducker.dis
