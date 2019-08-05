@@ -38,6 +38,7 @@ Run touch(1) in /tmp:
 
 ## References
 
+- [ducker](https://github.com/henesy/ducker)
 - [sys-pctl(2)](http://man.cat-v.org/inferno/2/sys-pctl)
 - [mkfs(8)](http://man.cat-v.org/inferno/8/mkfs)
 - [archfs(4)](http://man.cat-v.org/inferno/4/archfs)
