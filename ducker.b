@@ -106,7 +106,7 @@ init(ctx: ref Draw->Context, argv: list of string) {
 	if(protof != nil)
 		parseproto(protof);
 	
-	# Parse arch(6) file
+	# Parse mkfs(8) arch file
 	if(archf != nil)
 		parsearch(archf);
 
@@ -158,11 +158,11 @@ runcmd(ctx: ref Draw->Context, cmd: string, argv: list of string, pidc: chan of 
 	c->init(ctx, argv);
 }
 
-# Parse arch(6) file
+# Parse a mkfs(8) arch file
 parsearch(fname: string) {
 	fd := open(fname, OREAD);
 	if(fd == nil)
-		raise sprint("err: arch(6) parse failed - could not open %s for read - %r", fname);
+		raise sprint("err: arch parse failed - could not open %s for read - %r", fname);
 
 	# TODO - parse file and gen ns if need be
 	
